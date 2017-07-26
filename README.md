@@ -1,4 +1,4 @@
-# Xamarin BOOT_COMPLETED Location
+# Xamarin BOOT_COMPLETED Location for Android
 An example how to implement a location service with BOOT_COMPLETED in Xamarin (word in progress)
 
 ## Scenario
