@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -91,10 +90,17 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BackgroundServices\BroadcastReceiver.cs" />
-    <Compile Include="BackgroundServices\LocationService.cs" />
     <Compile Include="Models\Coordinates.cs" />
-    <Compile Include="BackgroundServices\BroadcastReceiverTest.cs" />
+    <Compile Include="Receivers\BootReceiver.cs" />
+    <Compile Include="BackgroudServices\Models\Coords.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="BackgroudServices\GPSService.cs" />
+    <Compile Include="BackgroudServices\GPSServiceBinder.cs" />
+    <Compile Include="BackgroudServices\GPSServiceConnection.cs" />
+    <Compile Include="BackgroudServices\GPSServiceReceiver.cs" />
+    <Compile Include="Utils\UtcTimestamper.cs" />
+    <Compile Include="Receivers\AirplaneModeReceiver.cs" />
+    <Compile Include="BackgroudServices\TimerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -105,15 +111,27 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi-v9\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi-v11\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi-v9\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi-v11\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi-v9\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi-v11\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\notification_template_icon_bg.png" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BackgroundServices\" />
+    <Folder Include="Receivers\" />
     <Folder Include="Models\" />
+    <Folder Include="BackgroudServices\" />
+    <Folder Include="BackgroudServices\Models\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
