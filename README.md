@@ -17,3 +17,4 @@ The app is made with:
 In my app I want to create a service to save constantly a device location. This service has to start when the phone is rebooted.
 
 ## Where you can start to understand
+I have created a short post to explain key code http://www.puresourcecode.com/dotnet/post/Xamarin-Android-and-starting-a-service-at-device-boot
